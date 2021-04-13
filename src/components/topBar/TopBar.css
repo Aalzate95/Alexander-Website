@@ -1,0 +1,49 @@
+.TopBar{
+    color:#D8A311;
+    position:fixed;
+    top:0;
+    width:100%;
+    height: 100px;
+}
+.navbar{
+    display:flex;
+    flex-direction:row;
+    margin-right: 20px;
+}
+.navbar-main{
+    margin-left:20px;
+}
+.navbar-main a{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight:bold;
+    color:#fdc029;
+}
+.navbar-options{
+    display:flex;
+    flex-direction:row-reverse;
+    width:100%;
+}
+.navbar-options ul{
+    display:flex;
+    flex-direction: row;
+    list-style-type:none;
+}
+
+.navbar-options li{
+    margin-left: 30px;
+}
+
+.navbar-options a{
+    text-decoration: none;
+    cursor:pointer;
+    color:#fdc029;
+}
+
+.navbar-options a:hover{
+    color:#df861d;
+
+}
+
+
+
