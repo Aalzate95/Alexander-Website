@@ -1,8 +1,21 @@
 import React from 'react'
 import './TopBar.css'
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("TopBar").style.top = "0";
+    } else {
+      document.getElementById("TopBar").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
 const TopBar = () => {
     return ( 
-        <div className="TopBar">
+        <div className="TopBar" id="TopBar">
             <nav className="navbar">
                 <div className="navbar-main">
                     <h3><a href="/">Alexander Alzate</a></h3>

@@ -1,14 +1,12 @@
 import './App.css';
 import TopBar from './components/topBar/TopBar'
-const texto = {
-  "sobreMi":{
-    "Saludo":"Hola!, mi nombre es Alexander Alzate"
-  }
-}
+import SideBar from './components/sideBar/SideBar'
+
 function App() {
   return (
     <div className="App">
       <TopBar/>
+      <SideBar/>
       <div className="Stars-container">
         <div id='stars'></div>
         <div id='stars2'></div>
@@ -16,10 +14,16 @@ function App() {
       </div>
 
       <div className="content">
-          <div>
-            <div className="resume">
+          <div className="resume">
+            <div className="resume-title">
               <h1>ALEXANDER ALZATE</h1>
-              <p>Desarrollador de Software</p>
+              <span></span>
+              <p>Desarrollador de Software / <br/>Ingeniero en Ciencias Computacionales</p>
+            </div>
+            <div className="resume-content">
+              <p>Soy un desarrollador de software colombiano residente en Ecuador especializado en desarrollo web.
+              Actualmente estoy trabajando para las multinacionales <a href="https://www.asimetrix.co/en/" rel="noopener noreferrer">Asimetrix</a> y <a href="https://www.premex.co/es/" rel="noopener noreferrer">EcuadPremex S.A</a>, 
+              empresas enfocadas a la producción animal.</p>
             </div>
           </div>
           <div id="SobreMi">
@@ -28,19 +32,27 @@ function App() {
             </div>
           </div>
           <section id="Habilidades">
-            <h1>Habilidades</h1>
+            <div className="Habilidades">
+              <h1>Habilidades</h1>
+            </div>
           </section>
           <section id="Proyectos">
+          <div className="Proyectos">
             <h1>Proyectos</h1>
+          </div>
           </section>
+
           <section id="Contacto">
-            <h1>Contacto</h1>
+            <div className="Contacto">
+              <h1>Contacto</h1>
+            </div>
           </section>
-  
       </div>
-      
     </div>
   );
 }
 
 export default App;
+
+  
+      

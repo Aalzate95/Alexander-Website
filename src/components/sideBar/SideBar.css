@@ -1,0 +1,39 @@
+.SideBar{
+    position:fixed;
+    height:auto;
+    background:#171820;
+    top:60vh;
+    width:40px;
+    border-radius:3px;
+}
+
+.SideBar:hover{
+    width:45px;
+    padding-left:5px;
+}
+
+.SideBar ul{
+    list-style:none;
+    margin:5px 0px 0 0;
+    padding:0px;
+    color:#df861d;
+}
+
+.SideBar ul li{
+    align-items: center;
+    justify-content: center;
+    padding:5px 7px 0 2px;
+
+}
+
+.SideBar ul li a{
+    font-size: calc(16px + 2vmin);
+    text-decoration: none;
+    color:#df861d;
+}
+
+.SideBar a:hover{
+    cursor:pointer;
+    color:white;
+    font-size:calc(17px + 2vmin) ;
+}

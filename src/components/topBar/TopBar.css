@@ -3,7 +3,9 @@
     position:fixed;
     top:0;
     width:100%;
-    height: 100px;
+    height: 70px;
+    transition: top 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .navbar{
     display:flex;
@@ -13,16 +15,26 @@
 .navbar-main{
     margin-left:20px;
 }
+.navbar-main h3{
+    margin:10px 0 10px 0;
+}
+
 .navbar-main a{
     cursor: pointer;
     text-decoration: none;
     font-weight:bold;
     color:#fdc029;
 }
+
+.navbar-main a:hover{
+    color:#bcb6ae;
+}
+
 .navbar-options{
     display:flex;
     flex-direction:row-reverse;
     width:100%;
+    margin:10px 0 10px 0;
 }
 .navbar-options ul{
     display:flex;

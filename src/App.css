@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap");
 .App {
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family:"Nunito","Roboto", "Helvetica Neue", sans-serif;
   height:100%
 }
+
 html,body{
   min-height: 100%
 }
@@ -23,37 +24,57 @@ html{
   position:fixed;
 }
 
+.card{
+  background:#1b2735;
+  width:100%;
+  z-index:1;
+  border-radius:3px;
+}
 .content{
   color:#bcb6ae;
   margin:0px 50px 0 50px;
-  
 }
 
-.SobreMi,.resume {
+.SobreMi,.resume,.Habilidades,.Proyectos,.Contacto {
   display: flex;
   flex-direction: column;
-}
-
-.resume{
-  min-height: 100vh;
-  align-items: left;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-.resume h1{
-  margin:0;
-  font-size: calc(50px+2vmin)
-}
-.SobreMi{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.resume{
+  display:flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+}
+.resume h1{
+  color:white;
+  margin:0;
+  font-size: calc(50px+2vmin)
+}
+.resume-title p{
+  font-size: 20px;
+  
+}
+.resume-title span{
+  display:block;
+  border-top: 3px solid #df861d;
+}
+
+.resume-content{
+  margin-left:30px;
+}
+.resume-content p{
+  text-align:justify;
+}
+.resume-content p a{
+  color:#fdc029;
+}
+
+.SobreMi{
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 
