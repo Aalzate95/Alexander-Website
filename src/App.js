@@ -40,7 +40,7 @@ function App() {
               
             </div>
           </div>
-          <section id="Habilidades">
+          <div id="Habilidades">
             <div className="Habilidades">
               <h1>-Habilidades-</h1>
               <div className="rocket">
@@ -49,8 +49,8 @@ function App() {
               <br/><br/>
               <h1>En proceso de desarrollo</h1>
             </div>
-          </section>
-          <section id="Proyectos">
+          </div>
+          <div id="Proyectos">
           <div className="Proyectos">
               <h1>-Proyectos-</h1>
               <div className="rocket">
@@ -59,7 +59,7 @@ function App() {
               <br/><br/>
               <h1>En proceso de desarrollo</h1>
           </div>
-          </section>
+          </div>
 
           <div id="Contacto">
             <div className="Contacto">
