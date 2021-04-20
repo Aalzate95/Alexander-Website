@@ -28,25 +28,62 @@ function App() {
           </div>
           <div id="SobreMi">
             <div className="SobreMi">
-              <p>Hola!, soy Alexander Alzate un desarrollador de software que ama aprender cosas nuevas día a día, apasionado por lo que hago, doy todo de mí en cada linea de codigo.</p>
+              <div className="SobreMi-title">
+                <h1>Sobre mi</h1>
+                <span></span>
+              </div>
+              <div className="resume-content">
+                <p>Hola!, soy Alexander Alzate un desarrollador de software que ama aprender
+                 cosas nuevas día a día, apasionado por lo que hago, doy todo de mí en cada 
+                 linea de codigo.</p>
+              </div>
+              
             </div>
           </div>
           <section id="Habilidades">
             <div className="Habilidades">
-              <h1>Habilidades</h1>
+              <h1>-Habilidades-</h1>
+              <div className="rocket">
+                <span className="fins"></span>
+              </div>
+              <br/><br/>
+              <h1>En proceso de desarrollo</h1>
             </div>
           </section>
           <section id="Proyectos">
           <div className="Proyectos">
-            <h1>Proyectos</h1>
+              <h1>-Proyectos-</h1>
+              <div className="rocket">
+                <span className="fins"></span>
+              </div>
+              <br/><br/>
+              <h1>En proceso de desarrollo</h1>
           </div>
           </section>
 
-          <section id="Contacto">
+          <div id="Contacto">
             <div className="Contacto">
-              <h1>Contacto</h1>
+              <div className="Contacto-title">
+                <h1>Contacto</h1>
+                <span></span>
+              </div>
+              <div className="Contacto-content">
+                  <div className="form-group">
+                    <input className="form-control" type="text" id="nombre" placeholder="NOMBRE"/>
+                  </div>
+                  <div className="form-group">
+                    <input className="form-control" type="mail" id="nombre" placeholder="E-MAIL"/>
+                  </div>
+                  <div className="form-group">
+                    <input className="form-control" type="text" placeholder="MENSAJE"/>
+                  </div>
+                  <div className="form-group buttons">
+                    <button className="form-button">Enviar</button>
+                  </div>
+              </div>
             </div>
-          </section>
+          </div>
+
       </div>
     </div>
   );

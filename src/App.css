@@ -57,7 +57,7 @@ html{
   font-size: 20px;
   
 }
-.resume-title span{
+.resume-title span,.SobreMi-title span,.Contacto-title span{
   display:block;
   border-top: 3px solid #df861d;
 }
@@ -77,6 +77,149 @@ html{
   color: white;
 }
 
+.Contacto {
+  color:white;
+  font-size: calc(50px+2vmin)
+}
+
+.Contacto-content{
+  display: flex;
+  flex-direction: column;
+  background-color:#090a0f;
+  border-radius: 5px;
+  padding:20px;
+  width:500px;
+  margin-top: 20px;
+}
+.form-group{
+  margin-bottom: 15px;
+}
+
+.form-group.message {
+  margin-top: 40px;
+}
+
+.form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.form-control::placeholder {
+  color: #666;
+}
+
+.form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.form-button {
+  background: none;
+  border: none;
+  color: #fdc029;
+  font-size: calc(14px + 1vmin);
+  cursor: pointer;
+  outline: none;
+}
+
+.form-button:hover {
+  color: #df861d;
+}
+.rocket {
+  width: 7em;
+  height: 11em;
+  font-size: 16px;
+  background: 
+      radial-gradient(
+          circle at 3.5em 5em,
+          transparent 1.5em,
+          lightslategray 1.5em, lightslategray 2em,
+          transparent 2em
+      ),
+      radial-gradient(
+          circle at 3.3em 5.2em,
+          deepskyblue 1.4em,
+          transparent 1.6em
+      ),
+      radial-gradient(
+          circle at 3.5em 5em,
+          white 1.5em,
+          transparent 1.5em
+      ),
+      linear-gradient(whitesmoke, darkgray);
+  border-radius: 50% / 70% 70% 5% 5%;
+  position: relative;
+}
+
+.rocket::before {
+  content: '';
+  position: absolute;
+  width: 6em;
+  height: 2em;
+  background-color: #444;
+  border-radius: 20%;
+  top: 10em;
+  left: 0.5em;
+  z-index: -1;
+}
+
+.rocket::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 4em;
+  height: 4em;
+  background: gold;
+  top: 10em;
+  left: 1.5em;
+  border-radius: 80% 0 50% 45% / 50% 0 80% 45%;
+  transform: rotate(135deg);
+  border: 0.5em solid orange;
+  z-index: -2;
+  animation: flame-spout 0.3s infinite;
+}
+
+@keyframes flame-spout {
+  0%, 100% {
+      filter: opacity(0.1);
+  }
+
+  50% {
+      filter: opacity(1);
+  }
+}
+
+.fins::before,
+.fins::after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 6em;
+  background: linear-gradient(tomato, darkred);
+  top: 7em;
+}
+
+.fins::before {
+  left: -2em;
+  border-radius: 3em 0 50% 100%;
+}
+
+.fins::after {
+  right: -2em;
+  border-radius: 0 3em 100% 50%;
+}
 
 
 #stars {
