@@ -1,8 +1,40 @@
 import './App.css';
 import TopBar from './components/topBar/TopBar'
 import SideBar from './components/sideBar/SideBar'
+import react_logo from './images/react.png'
+import c_logo from './images/c-logo.png'
+import java_logo from './images/java-logo.png'
+import python_logo from './images/python-logo.png'
+import html_logo from './images/html-logo.png'
+import css_logo from './images/css-logo.png'
+import javascript_logo from './images/javascript-logo.png'
+import postgres_logo from './images/postgres-logo.png'
+import mongodb_logo from './images/mongodb-logo.png'
+import git_logo from './images/git-logo.png'
+const habilidades =[
+  {title:"React",logo:react_logo,color:"#20232A"},
+  {title:"Python",logo:python_logo,color:"#20232A"},
+  {title:"C",logo:c_logo,color:"#20232A"},
+  {title:"Java",logo:java_logo,color:"#20232A"},
+  {title:"Html",logo:html_logo,color:"#20232A"},
+  {title:"CSS",logo:css_logo,color:"#20232A"},
+  {title:"JavaScript",logo:javascript_logo,color:"#20232A"},
+  {title:"Postgres",logo:postgres_logo,color:"#20232A"},
+  {title:"MongoDB",logo:mongodb_logo,color:"#20232A"},
+  {title:"Git",logo:git_logo,color:"#20232A"},
+]
 
 function App() {
+  const renderPlanets = habilidades.map((planet)=>{
+    return(
+      <figure className="planeta">
+        <div className="planeta-logo">
+          <img alt="react" src={planet.logo} height="50" width="50"/>
+        </div>
+        <p>{planet.title}</p>
+      </figure>
+    )
+  })
   return (
     <div className="App">
       <TopBar/>
@@ -40,17 +72,19 @@ function App() {
               
             </div>
           </div>
-          <section id="Habilidades">
+          <div id="Habilidades">
             <div className="Habilidades">
-              <h1>-Habilidades-</h1>
-              <div className="rocket">
-                <span className="fins"></span>
+              <div className="Habilidades-title">
+                <h1>Habilidades</h1>
+                <span></span>
               </div>
-              <br/><br/>
-              <h1>En proceso de desarrollo</h1>
+              <div className="Habilidades-content">
+                {renderPlanets}
+              </div>
+              
             </div>
-          </section>
-          <section id="Proyectos">
+          </div>
+          <div id="Proyectos">
           <div className="Proyectos">
               <h1>-Proyectos-</h1>
               <div className="rocket">
@@ -59,7 +93,7 @@ function App() {
               <br/><br/>
               <h1>En proceso de desarrollo</h1>
           </div>
-          </section>
+          </div>
 
           <div id="Contacto">
             <div className="Contacto">
