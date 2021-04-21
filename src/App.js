@@ -28,7 +28,7 @@ const habilidades =[
 function App() {
   const renderPlanets = habilidades.map((planet)=>{
     return(
-      <figure className="planeta">
+      <figure className="planeta" key={planet.title}>
         <div className="planeta-logo">
           <img alt="react" src={planet.logo}/>
         </div>
