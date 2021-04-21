@@ -55,7 +55,6 @@ html{
 }
 .resume-title p{
   font-size: 20px;
-  
 }
 .resume-title span,.SobreMi-title span,.Contacto-title span,.Habilidades-title span{
   display:block;
@@ -71,17 +70,6 @@ html{
 .resume-content p a{
   color:#fdc029;
 }
-
-/* .SobreMi{
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .Contacto h1{
-  color:white;
-  margin:0;
-  font-size: calc(50px+2vmin)
-} */
 
 .Contacto-content{
   display: flex;
@@ -137,6 +125,102 @@ html{
 
 .form-button:hover {
   color: #df861d;
+}
+.Habilidades-title{
+  height: 100%;
+  position: absolute;
+  vertical-align:super;
+  margin-top:100px;
+}
+.Habilidades-content{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  z-index:1;
+  /**/
+  
+}
+.planeta{
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  height:100px;
+  width:100px;
+  display:block;
+  background: radial-gradient(circle at 100px 100px, #20232A, #000);
+  margin:30px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.planeta-logo{
+  display:flex;
+  height:100%;
+  width:100%;
+  align-items: center;
+  text-align: center;
+}
+
+.planeta-logo img{
+  margin-left: auto;
+  margin-right: auto;
+  height:50px;
+  width:50px;
+}
+
+.planeta:hover{
+  height:110px;
+  width:110px;
+  cursor: pointer;
+  margin:10px
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
+@media only screen and (max-width: 600px) {
+  .resume{
+    flex-direction: column;
+    text-align: center;
+  }
+  .resume-content{
+    margin:0;
+  }
+  .Habilidades-content{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .planeta{
+    height:50px;
+    width:50px;
+  }
+  .planeta-logo img{
+    height:25px;
+    width:25px;
+  }
+  .Proyectos{
+    text-align: center;
+  }
+
+  .Contacto-content{
+    display: flex;
+    flex-direction: column;
+    background-color:#090a0f;
+    border-radius: 5px;
+    padding:20px;
+    width:200px;
+    margin-top: 20px;
+  }
+
+  .planeta:hover{
+    height:60px;
+    width:60px;
+  }
 }
 
 .rocket {
@@ -304,58 +388,4 @@ html{
   to {
     transform: translateY(-2000px);
   }
-}
-.Habilidades-title{
-  height: 100%;
-  position: absolute;
-  vertical-align:super;
-  margin-top:100px;
-}
-.Habilidades-content{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  z-index:1;
-  /**/
-  
-}
-.planeta{
-  align-items: center;
-  text-align: center;
-  border-radius: 50%;
-  height:100px;
-  width:100px;
-  display:block;
-  background: radial-gradient(circle at 100px 100px, #20232A, #000);
-  margin:30px;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.planeta-logo{
-  display:flex;
-  height:100%;
-  width:100%;
-  align-items: center;
-  text-align: center;
-  
-}
-.planeta-logo img{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.planeta:hover{
-  height:110px;
-  width:110px;
-  cursor: pointer;
-  margin:10px
-}
-
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }    
 }
