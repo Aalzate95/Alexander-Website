@@ -7,7 +7,7 @@
     transition: top 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color:#090a0f;
-    z-index:1;
+    z-index:10;
 }
 .navbar{
     display:flex;
@@ -56,7 +56,30 @@
 
 .navbar-options a:hover{
     color:#df861d;
+}
 
+@media only screen and (max-width: 600px) {
+    
+    .navbar-main{
+        margin-left:5px;
+    }
+
+    .navbar-options{
+
+        width:100%;
+        margin:10px 0 10px 10px;
+    }
+
+    .navbar-options ul{
+        display:flex;
+        flex-direction: row;
+        list-style-type:none;
+        padding:0;
+    }
+    .navbar-options li{
+        margin-left: 10px;
+        font-size: 13px;
+    }
 }
 
 

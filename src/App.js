@@ -11,6 +11,7 @@ import javascript_logo from './images/javascript-logo.png'
 import postgres_logo from './images/postgres-logo.png'
 import mongodb_logo from './images/mongodb-logo.png'
 import git_logo from './images/git-logo.png'
+
 const habilidades =[
   {title:"React",logo:react_logo,color:"#20232A"},
   {title:"Python",logo:python_logo,color:"#20232A"},
@@ -29,14 +30,14 @@ function App() {
     return(
       <figure className="planeta">
         <div className="planeta-logo">
-          <img alt="react" src={planet.logo} height="50" width="50"/>
+          <img alt="react" src={planet.logo}/>
         </div>
         <p>{planet.title}</p>
       </figure>
     )
   })
   return (
-    <div className="App">
+    <div className="App" >
       <TopBar/>
       <SideBar/>
       <div className="Stars-container">
