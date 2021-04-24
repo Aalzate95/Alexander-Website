@@ -1,0 +1,240 @@
+.carrousel{
+    display: flex;
+    flex-direction:column;
+}
+
+.items{
+    display:flex;
+    flex-direction:row;
+    height:auto;
+}
+.item{
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    transition: all 300ms ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+.item.active {
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 2;
+    box-shadow: 0px 0px 80px -35px rgba(211, 211, 211, 0.75);
+}
+
+.item.prev {
+    z-index: 1;
+    opacity: 0.25;
+    transform: translate(80%, 5%);
+}
+
+.item.next {
+    z-index: 1;
+    opacity: 0.25;
+    transform: translate(-80%, 5%);
+}
+
+.item-content{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-content:hover{
+    cursor: pointer;
+    opacity:2;
+}
+
+.item-content-card{
+    color:black;
+    opacity:0.8;
+    border-radius: 5px;
+    height: 50%;
+    width: 80%;
+    background-color: white;
+    font-size: 16px;
+}
+
+.buttons{
+    transform: translate(0, 300px);
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+.button{
+    display:flex;
+    flex-direction:column;
+    background: radial-gradient(circle at 70px 1px, #fdc029, #000);
+    /* background:#fdc029; */
+    font-size: 32px;
+    height: 75px;
+    width: 75px;
+    border-radius:50%;
+    margin:0 20px 0 20px;
+    z-index:2;
+}
+.button:hover{
+    cursor: pointer;
+    background: radial-gradient(circle at 70px 10px, #df861d, #000);
+    /* background:#df861d; */
+    box-shadow: 0px 0px 30px 5px rgba(211, 211, 211, 0.75);
+}
+
+.button i{
+    margin-top:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .items{
+        margin-left:25px;
+      
+    }
+    .item{
+        width: 180px;
+        height: 150px;
+    }
+
+    .item.prev {
+        z-index: 1;
+        opacity: 0.25;
+        transform: translate(50%, 5%);
+    }
+    
+    .item.next {
+        z-index: 1;
+        opacity: 0.25;
+        transform: translate(-50%, 5%);
+    }
+    .buttons{
+        transform: translate(0, 200px);
+        margin-bottom:300px;
+       
+    }
+    
+  }
+
+/* 
+.items {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+
+.items .item  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item.active {
+    opacity: 1;
+    z-index: 99;
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-125%, -50%);
+}
+
+.item.next {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(25%, -50%);
+}
+
+
+
+.items .buttons{
+    position: absolute;
+    margin-top:100px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 460px;
+    z-index: 98;
+    
+}
+
+.buttons .button {
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+  }
+  
+.buttons:hover .button:hover {
+    background-color: #df861d;
+}
+  
+.buttons .button:before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80px;
+height: 80px;
+background-color: #fdc029;
+border-radius: 50%;
+z-index: -99;
+}
+  
+  .buttons .button:nth-child(1) {
+    float: left;
+  }
+  
+  .buttons .button:nth-child(2) {
+    float: right;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .items .item  {
+        width: 150px;
+        height: 150px;
+        
+    }
+    .items .buttons{
+        width: 160px;
+    }
+    .buttons .button:before {
+        width: 50px;
+        height: 50px;
+        }
+  } */
