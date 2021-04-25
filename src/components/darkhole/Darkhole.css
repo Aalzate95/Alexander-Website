@@ -1,0 +1,62 @@
+.Darkhole{
+	display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Singularidad{
+    position: absolute;
+    width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 50%;
+	z-index: 2;
+	line-height: 50px;
+	text-align: center;
+	transition: all 500ms;
+    box-shadow: 0px 0px 40px 10px rgba(245, 188, 1, 0.75);
+}
+
+.circle {
+    position: absolute;
+    margin-top: 25px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    animation: move-to-center 3s ease-in-out infinite;
+  }
+
+  .Singularidad:hover{
+    cursor:pointer;
+    box-shadow: 0px 0px 20px 5px rgba(255, 75, 4, 0.75);
+  }
+
+  .Singularidad:hover + .circle:nth-child(all){
+    animation: move-to-center 1s ease-in-out infinite;
+    width: 13px;
+    height: 13px;
+  }
+
+  
+
+@keyframes move-to-center {
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
+
+
+
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+       }
+  
+    100% {
+        transform: rotate(72000000deg);
+       }  
+    }
