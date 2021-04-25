@@ -11,7 +11,7 @@ const Carrousel = ({data}) => {
 
     const totalElements = data.length-1;
 
-    const handleClickPrev =()=>{
+    const handleClickNext =()=>{
         setNext(current)
         setCurrent(prev)
         if(prev===0){
@@ -19,7 +19,7 @@ const Carrousel = ({data}) => {
         }
         else{setPrev(prev-1)}
     }
-    const handleClickNext= () =>{
+    const handleClickPrev= () =>{
         setPrev(current)
         setCurrent(next)
         if(next===totalElements){
@@ -49,7 +49,7 @@ const Carrousel = ({data}) => {
             </div>
             <div className="buttons">
                 <div className="button" onClick={(e)=>{handleClickPrev(e)}}><i><GrCaretPrevious/></i></div>
-                <div className="button" onClick={(e)=>{handleClickNext(e)}}><i className=""><GrCaretNext/></i></div>
+                <div className="button" onClick={(e)=>{handleClickNext(e)}}><i ><GrCaretNext/></i></div>
             </div>
         </div>
      );

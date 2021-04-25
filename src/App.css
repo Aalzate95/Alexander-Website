@@ -52,7 +52,6 @@ html{
 .title{
   height: 100%;
   vertical-align:super;
-  margin-top:150px;
   margin-bottom: 20px;
 }
 .title h1{
@@ -66,16 +65,40 @@ html{
 .resume-content{
   margin-left:30px;
 }
+
 .resume-content p{
   text-align:justify;
 }
+
 .resume-content p a{
   color:#fdc029;
 }
 
-.Proyectos-content{
-  margin-top: 30px;
+.SobreMi-content{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
+
+.SobreMi-content-left{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.SobreMi-content-rigth{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.Proyectos-content{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
 .Contacto-content{
   display: flex;
   flex-direction: column;

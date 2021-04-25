@@ -12,6 +12,7 @@ import postgres_logo from './images/postgres-logo.png'
 import mongodb_logo from './images/mongodb-logo.png'
 import git_logo from './images/git-logo.png'
 import Carrousel from './components/carrousel/Carrousel'
+import Darkhole from './components/darkhole/Darkhole'
 
 const habilidades =[
   {title:"React",logo:react_logo,color:["#20232A"]},
@@ -27,11 +28,11 @@ const habilidades =[
 ]
 
 const dataProyectos = [
-  {titulo:"prueba1",descripcion:"masjda  asjdansd jandad",imagen:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_blanco_500x500.jpg"},
-  {titulo:"prueba2",descripcion:"masjda  asjdansd jandad",imagen:"http://via.placeholder.com/500x500"},
-  {titulo:"prueba3",descripcion:"masjda  asjdansd jandad",imagen:"https://image.shutterstock.com/image-vector/icon-mouse-cursor-pointer-arrow-260nw-1287656104.jpg"},
-  {titulo:"prueba4",descripcion:"masjda  asjdansd jandad",imagen:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_blanco_500x500.jpg"},
-  {titulo:"prueba5",descripcion:"masjda  asjdansd jandad",imagen:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_blanco_500x500.jpg"},
+  {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://i.pinimg.com/originals/26/63/9a/26639a3cf8d30c21a9a2ca65695712d9.jpg"},
+  {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://i.pinimg.com/originals/c3/d7/9e/c3d79eb11ded441753abdd790569ca08.jpg"},
+  {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://cdn.wallpapersafari.com/82/0/Q6AgKl.jpg"},
+  {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://images-na.ssl-images-amazon.com/images/I/61S8d42Id7L._AC_.jpg"},
+  {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVZ6CA91CIqjsEaG1b1wCihQ6paCjF93hMAnK3Scv_UW7FeuwR3yq_JF9Q32BjLqCmyo&usqp=CAU"},
 ]
 
 function App() {
@@ -74,12 +75,20 @@ function App() {
                 <h1>Sobre mi</h1>
                 <span></span>
               </div>
-              <div className="resume-content">
-                <p>Hola!, soy Alexander Alzate un desarrollador de software que ama aprender
-                 cosas nuevas día a día, apasionado por lo que hago, doy todo de mí en cada 
-                 linea de codigo.</p>
+              <p>Si quieres conocer mi historia o conseguir mi CV, los tienes aquí abajo.</p>
+              <div className="SobreMi-content">
+                  <div className="SobreMi-content-left">
+                    <Darkhole
+                        title="H"
+                      />
+                  </div>
+                  <div className="SobreMi-content-rigth">
+                    <Darkhole
+                      title="CV"
+                    />
+                    
+                  </div>
               </div>
-              
             </div>
           </div>
           <div id="Habilidades">
@@ -101,7 +110,7 @@ function App() {
                 <span></span>
               </div>
 
-              <div  className="">
+              <div  className="Proyectos-content">
                 <Carrousel
                   data={dataProyectos}
                 />
