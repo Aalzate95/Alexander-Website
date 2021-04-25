@@ -75,21 +75,8 @@ html{
 }
 
 .SobreMi-content{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.SobreMi-content-left{
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.SobreMi-content-rigth{
-  display: flex;
-  flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns:1fr 1fr;
   width: 100%;
 }
 

@@ -77,17 +77,13 @@ function App() {
               </div>
               <p>Si quieres conocer mi historia o conseguir mi CV, los tienes aquí abajo.</p>
               <div className="SobreMi-content">
-                  <div className="SobreMi-content-left">
                     <Darkhole
                         title="H"
                       />
-                  </div>
-                  <div className="SobreMi-content-rigth">
                     <Darkhole
                       title="CV"
                     />
-                    
-                  </div>
+
               </div>
             </div>
           </div>
