@@ -28,7 +28,7 @@ const Darkhole = ({title}) => {
       }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return ( 
-        <div className="Darkhole">
+        <div className="Darkhole" >
             <div className="Singularidad">
                 <span>{title}</span>
             </div>
