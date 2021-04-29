@@ -1,11 +1,6 @@
 import React,{useEffect} from 'react';
 import './Darkhole.css'
 
-
-
-
-
-
 const Darkhole = ({title}) => {
 
     const setChild=(delay=0.05,rotate=12,translate=4)=>{
