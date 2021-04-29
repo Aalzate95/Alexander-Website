@@ -1,4 +1,5 @@
 import React from 'react'
+import emailjs from 'emailjs-com'
 import TopBar from '../../components/topBar/TopBar'
 import SideBar from '../../components/sideBar/SideBar'
 import react_logo from '../../images/react.png'
@@ -47,6 +48,17 @@ const Main = () => {
           </figure>
         )
       })
+
+    const SendMail =(e) =>{
+        e.preventDefault();
+        emailjs.sendForm('service_snfohca', 'template_r5pg4lf', e.target, 'user_pe1GnXq8y7xsEue8h3XOg')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
+
     return ( 
         <div className="App" >
       <TopBar/>
@@ -122,20 +134,20 @@ const Main = () => {
                 <h1>Contacto</h1>
                 <span></span>
               </div>
-              <div className="Contacto-content">
+              <form className="Contacto-content" onSubmit={(e)=>{SendMail(e)}}>
                   <div className="form-group">
-                    <input className="form-control" type="text" id="nombre" placeholder="NOMBRE"/>
+                    <input className="form-control" name="from_name" type="text" id="nombre" placeholder="NOMBRE"/>
                   </div>
                   <div className="form-group">
-                    <input className="form-control" type="mail" id="nombre" placeholder="E-MAIL"/>
+                    <input className="form-control" name="reply_to" type="mail" id="nombre" placeholder="E-MAIL"/>
                   </div>
                   <div className="form-group">
-                    <input className="form-control" type="text" placeholder="MENSAJE"/>
+                    <input className="form-control" name="message" type="text" placeholder="MENSAJE"/>
                   </div>
                   <div className="form-group contact-button">
-                    <button className="form-button">Enviar</button>
+                    <input className="form-button" type="submit" value="Enviar" />
                   </div>
-              </div>
+              </form>
             </div>
           </div>
 
