@@ -6,14 +6,14 @@
 
 .Singularidad{
     position: absolute;
-    width: 50px;
-	height: 50px;
-	background-color: black;
-	border-radius: 50%;
-	z-index: 2;
-	line-height: 50px;
-	text-align: center;
-	transition: all 500ms;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2;
+    line-height: 70px;
+    text-align: center;
+    transition: all 500ms;
     box-shadow: 0px 0px 40px 10px rgba(245, 188, 1, 0.75);
 }
 
@@ -37,6 +37,10 @@
     animation: move-to-center 1s ease-in-out infinite;
     width: 13px;
     height: 13px;
+  }
+
+  .Singularidad:hover > span{
+      color:rgba(255, 75, 4, 0.75);
   }
 
   
