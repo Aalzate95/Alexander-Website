@@ -1,10 +1,9 @@
 import './App.css';
-import Main from './views/main/Main'
-
+import CreateRoutes from './Routes'
 
 function App() {
   return (
-    <Main/>
+    <CreateRoutes/>
   );
 }
 

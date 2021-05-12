@@ -242,17 +242,20 @@ html{
   .resume-content{
     margin:0;
   }
+  #Habilidades{
+    padding-top:50px;
+  }
   .Habilidades-content{
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .planeta{
-    height:50px;
-    width:50px;
+    height:40px;
+    width:40px;
   }
   .planeta-logo img{
-    height:25px;
-    width:25px;
+    height:20px;
+    width:20px;
   }
   .Proyectos{
     text-align: center;

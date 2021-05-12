@@ -1,0 +1,39 @@
+.AboutMe{
+    color:white;
+    align-items: center;
+    text-align: center;
+    width:100%;
+}
+
+.etiquetaReturn{
+    position:fixed;
+    top:20px;
+    left:-40px;
+    background-color:#df861d;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    color:#df861d;
+    font-weight:bold;
+}
+
+.etiquetaReturn:hover{
+    cursor:pointer;
+    left:0px;
+    color:black;
+}
+
+.etiquetaReturn p{
+    margin: 10px 5px 10px 5px;
+}
+
+
+.AboutMe span{
+    display:block;
+    border-top: 3px solid #df861d;
+    margin:0 30% 0 30%;
+}
+
+.AboutMe-content  p{
+    margin-top:250px;
+    font-size: x-large;
+}

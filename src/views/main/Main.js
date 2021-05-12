@@ -1,5 +1,5 @@
-import React from 'react'
-import emailjs from 'emailjs-com'
+import React,{useState} from 'react'
+import { useHistory } from "react-router-dom";
 import TopBar from '../../components/topBar/TopBar'
 import SideBar from '../../components/sideBar/SideBar'
 import react_logo from '../../images/react.png'
@@ -39,7 +39,9 @@ const habilidades =[
 
 const Main = () => {
 
-
+    const [mailMensaje,setMailMensaje] = useState("")
+    const [mailNombre,setMailNombre] = useState("")
+    const history = useHistory();
     const renderPlanets = habilidades.map((planet)=>{
         return(
           <div className="planeta-card"key={planet.title}>
@@ -59,16 +61,6 @@ const Main = () => {
           
         )
       })
-
-    const SendMail =(e) =>{
-        e.preventDefault();
-        emailjs.sendForm('service_snfohca', 'template_r5pg4lf', e.target, 'user_pe1GnXq8y7xsEue8h3XOg')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-    }
 
     return ( 
         <div className="App" >
@@ -101,13 +93,14 @@ const Main = () => {
               </div>
               <p>Si quieres conocer mi historia o conseguir mi CV, los tienes aquí abajo.</p>
               <div className="SobreMi-content">
-                    <Darkhole
-                        title="H"
-                      />
+                    <div onClick={(e)=>{history.push("/about-me")}}>
+                      <Darkhole
+                          title="H"
+                        />
+                    </div>
                     <Darkhole
                       title="CV"
                     />
-
               </div>
             </div>
           </div>
@@ -145,20 +138,17 @@ const Main = () => {
                 <h1>Contacto</h1>
                 <span></span>
               </div>
-              <form className="Contacto-content" onSubmit={(e)=>{SendMail(e)}}>
+              <div className="Contacto-content">
                   <div className="form-group">
-                    <input className="form-control" name="from_name" type="text" id="nombre" placeholder="NOMBRE"/>
+                    <input className="form-control" name="from_name" type="text" id="nombre" placeholder="NOMBRE" onChange={(e)=>{setMailNombre(e.target.value)}}/>
                   </div>
                   <div className="form-group">
-                    <input className="form-control" name="reply_to" type="mail" id="nombre" placeholder="E-MAIL"/>
-                  </div>
-                  <div className="form-group">
-                    <input className="form-control" name="message" type="text" placeholder="MENSAJE"/>
+                    <input className="form-control" name="message" type="text" placeholder="MENSAJE" onChange={(e)=>{setMailMensaje(e.target.value)}}/>
                   </div>
                   <div className="form-group contact-button">
-                    <input className="form-button" type="submit" value="Enviar" />
+                    <a href={`mailto:alex.alzate95@gmail.com?subject=Quiero contactar contigo, mi nombre es ${mailNombre}&body=${mailMensaje}`} className="form-button">Enviar</a>
                   </div>
-              </form>
+              </div>
             </div>
           </div>
 
