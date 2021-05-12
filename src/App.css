@@ -146,25 +146,41 @@ html{
 
 .Habilidades-content{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   z-index:1;
   /**/
-  
+}
+
+.planeta-card{
+  display:flex;
+  flex-direction: row;
+  margin:15px 30px 15px 30px;
+  vertical-align: center;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.description-card h4{
+  margin:0;
+}
+
+.description-card {
+  vertical-align: middle;
+  align-items: center;
 }
 
 .planeta{
   align-items: center;
   text-align: center;
   border-radius: 50%;
-  height:100px;
-  width:100px;
+  height:50px;
+  width:50px;
   background: radial-gradient(circle at 100px 100px, #20232A, #000);
-  margin:30px;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  transition: all .2s ease-in-out;
+  margin:0 10px 0 0;
+  
 }
 
 .planeta-logo{
@@ -178,17 +194,34 @@ html{
 .planeta-logo img{
   margin-left: auto;
   margin-right: auto;
-  height:50px;
-  width:50px;
+  height:25px;
+  width:25px;
 }
-
-.planeta:hover{
-  transform: scale(2);
-  height:110px;
-  width:110px;
-  cursor: pointer;
-  margin:20px ;
-
+.barraDeHabilidad{
+  position:relative;
+  width:200px;
+  height:17px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.nivelHabilidad{
+  position:absolute;
+  top:2px;
+  left:2px;
+  height:13px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.75);
+  z-index:2;
+}
+.sombraBarraDeHabilidad{
+  position:absolute;
+  top:2px;
+  left:2px;
+  height:13px;
+  width: 195px;
+  border-radius: 10px;
+  background-color:rgb(27, 27, 27);
+  z-index:1;
 }
 
 @keyframes floating {
@@ -209,17 +242,20 @@ html{
   .resume-content{
     margin:0;
   }
+  #Habilidades{
+    padding-top:50px;
+  }
   .Habilidades-content{
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .planeta{
-    height:50px;
-    width:50px;
+    height:40px;
+    width:40px;
   }
   .planeta-logo img{
-    height:25px;
-    width:25px;
+    height:20px;
+    width:20px;
   }
   .Proyectos{
     text-align: center;
