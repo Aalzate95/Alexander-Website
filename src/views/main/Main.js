@@ -17,35 +17,46 @@ import Darkhole from '../../components/darkhole/Darkhole'
 
 
 const habilidades =[
-    {title:"React",logo:react_logo,color:["#20232A"]},
-    {title:"Python",logo:python_logo,color:"#5c59ff"},
-    {title:"C",logo:c_logo,color:"#59ff99"},
-    {title:"Java",logo:java_logo,color:"#fff459"},
-    {title:"Html",logo:html_logo,color:"#8bff59"},
-    {title:"CSS",logo:css_logo,color:"#e3fffe"},
-    {title:"JavaScript",logo:javascript_logo,color:"#ff6666"},
-    {title:"Postgres",logo:postgres_logo,color:"#5da0d4"},
-    {title:"MongoDB",logo:mongodb_logo,color:"#ff9959"},
-    {title:"Git",logo:git_logo,color:"#20232A"},
+    {title:"React",logo:react_logo,backgroundColor:"#20232A",barColor:"#3B8093",nivelHabilidad:"70%"},
+    {title:"Python",logo:python_logo,backgroundColor:"#5c59ff",barColor:"#FFCD39",nivelHabilidad:"80%"},
+    {title:"C",logo:c_logo,backgroundColor:"#59ff99",barColor:"#3949AB",nivelHabilidad:"20%"},
+    {title:"Java",logo:java_logo,backgroundColor:"#fff459",barColor:"#BF190A",nivelHabilidad:"50%"},
+    {title:"Html",logo:html_logo,backgroundColor:"#8bff59",barColor:"#E45E3B",nivelHabilidad:"90%"},
+    {title:"CSS",logo:css_logo,backgroundColor:"#e3fffe",barColor:"#3A93C8",nivelHabilidad:"80%"},
+    {title:"JavaScript",logo:javascript_logo,backgroundColor:"#ff6666",barColor:"#E3A028",nivelHabilidad:"65%"},
+    {title:"PostgreSQL",logo:postgres_logo,backgroundColor:"#5da0d4",barColor:"#233D5C",nivelHabilidad:"20%"},
+    {title:"MongoDB",logo:mongodb_logo,backgroundColor:"#ff9959",barColor:"#689A3F",nivelHabilidad:"20%"},
+    {title:"Git",logo:git_logo,backgroundColor:"#20232A",barColor:"#F05133",nivelHabilidad:"60%"},
   ]
   
   const dataProyectos = [
-    {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://i.pinimg.com/originals/26/63/9a/26639a3cf8d30c21a9a2ca65695712d9.jpg"},
-    {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://i.pinimg.com/originals/c3/d7/9e/c3d79eb11ded441753abdd790569ca08.jpg"},
-    {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://cdn.wallpapersafari.com/82/0/Q6AgKl.jpg"},
-    {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://images-na.ssl-images-amazon.com/images/I/61S8d42Id7L._AC_.jpg"},
-    {titulo:"Trabajando",descripcion:"masjda  asjdansd jandad",imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVZ6CA91CIqjsEaG1b1wCihQ6paCjF93hMAnK3Scv_UW7FeuwR3yq_JF9Q32BjLqCmyo&usqp=CAU"},
+    {titulo:"En construcción",descripcion:"",imagen:"https://i.pinimg.com/originals/26/63/9a/26639a3cf8d30c21a9a2ca65695712d9.jpg"},
+    {titulo:"En construcción",descripcion:"",imagen:"https://i.pinimg.com/originals/c3/d7/9e/c3d79eb11ded441753abdd790569ca08.jpg"},
+    {titulo:"En construcción",descripcion:"",imagen:"https://cdn.wallpapersafari.com/82/0/Q6AgKl.jpg"},
+    {titulo:"En construcción",descripcion:"",imagen:"https://images-na.ssl-images-amazon.com/images/I/61S8d42Id7L._AC_.jpg"},
+    {titulo:"En construcción",descripcion:"",imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVZ6CA91CIqjsEaG1b1wCihQ6paCjF93hMAnK3Scv_UW7FeuwR3yq_JF9Q32BjLqCmyo&usqp=CAU"},
   ]
 
 const Main = () => {
+
+
     const renderPlanets = habilidades.map((planet)=>{
         return(
-          <figure className="planeta" key={planet.title} style={{background:`radial-gradient(circle at 100px 18px, ${planet.color}, #000)`}}>
-            <div className="planeta-logo">
-              <img alt="react" src={planet.logo}/>
-            </div>
-            <p>{planet.title}</p>
-          </figure>
+          <div className="planeta-card"key={planet.title}>
+                  <figure className="planeta"  style={{background:`radial-gradient(circle at 100px 18px, ${planet.backgroundColor}, #000)`}}>
+                    <div className="planeta-logo">
+                      <img alt="react" src={planet.logo}/>
+                    </div>
+                  </figure>
+                  <div className="description-card">
+                    <h4>{planet.title}</h4>
+                    <div className="barraDeHabilidad">
+                      <div className="nivelHabilidad" style={{backgroundColor:`${planet.barColor}`,width:`${planet.nivelHabilidad}`}}></div>
+                      <div className="sombraBarraDeHabilidad"></div>
+                    </div>
+                  </div>
+                </div>
+          
         )
       })
 
@@ -107,7 +118,7 @@ const Main = () => {
                 <span></span>
               </div>
               <div className="Habilidades-content">
-                {renderPlanets}
+                  {renderPlanets}
               </div>
               
             </div>
