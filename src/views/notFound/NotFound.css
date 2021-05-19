@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,500');
+.NotFound-content{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    color:white;
+    text-align:center;
+    align-items:center;
+    vertical-align:middle;
+    margin-top:auto;
+    font-family: "Roboto Mono", "Liberation Mono", Consolas, monospace;
+}
+
+.NotFound h1{
+    font-size:50px;
+    margin: 0 0 10px 0;
+}
+.NotFound h1,.NotFound h2{
+    z-index:2
+}
+
+.circulo-externo{
+    position: absolute;
+    height: 404px;
+    width: 404px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 65%, rgb(255, 255, 255) 30%);
+    z-index:0;
+}
