@@ -58,41 +58,53 @@
     width: 250px;
     height: 350px;
     background-color: #eee;
-    background-image: url("../../images/Me.jpg");
+    background-image: url("../../images/Me.png");
     position: relative;
     z-index: 1;
-    background-size: cover;
     background-position: center;
     border-radius:5px;
 }
-
-.border-photo:after {
-    content: "";
+.border-photo-background{
+    position: absolute;
+    width: 240px;
+    height:340px;
+    background-color:#1b2735;
+    margin:0 !important; 
+    top:5px;
+    left:5px;
+    border-radius:5px;
+}
+.photo{
     position: absolute;
     width: 240px;
     height: 340px;
-    left: 5px;
+    background-image: url("../../images/Me.png");
+    z-index: 3;
+    margin:0 !important;
+    left:5px;
     top: 5px;
-    background-color: #1b2735;
     border-radius:5px;
-  }
+    background-position: center;
+}
 
 .imagen {
     position: absolute;
     width: 240px;
     height: 342px;
-    left: -7px;
-    top: -12px;
-    background-image: url("../../images/Me.jpg");
+    margin:0;
+    left: -5px;
+    top: -5px;
+    background-color:red;
+    background-image: url("../../images/Me.png");
     background-size: 250px 350px;
     background-size: cover;
     background-position: center;
-    z-index: 2;
+    z-index: 3;
     transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
     border-radius:5px;
   }
 
-  .border-photo:hover > .imagen {
+  .border-photo:hover > .photo {
     transform: translate(-15px, -15px);
     transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
   }

@@ -21,9 +21,12 @@ const AboutMe = () => {
                         <p>Al culminar mis estudios de colegio y haber obtenido mi título de bachiller y de administrador en sistemas, inmediatamente ingresé a la universidad a estudiar la carrera de Ingeniería, carrera a la que he agarrado mucho cariño y ha aumentado mi pasión por la computación.</p>
                     </div>
                     <div className="AboutMe-photo">
+                        
                         <div className="border-photo">
-                            <div className="imagen"></div>
+                            <div className="photo"></div>
+                            <div className="border-photo-background"></div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
