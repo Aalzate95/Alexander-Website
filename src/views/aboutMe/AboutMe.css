@@ -3,6 +3,7 @@
     align-items: center;
     text-align: center;
     width:100%;
+
 }
 
 .etiquetaReturn{
@@ -27,13 +28,84 @@
 }
 
 
-.AboutMe span{
+.title span{
     display:block;
     border-top: 3px solid #df861d;
     margin:0 30% 0 30%;
 }
 
-.AboutMe-content  p{
-    margin-top:250px;
+.AboutMe-content  div{
     font-size: x-large;
+    margin: 15px 5% 30px 5%;
 }
+
+.AboutMe-history{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    text-align:justify
+}
+
+.AboutMe-photo{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+}
+
+.border-photo{
+    width: 250px;
+    height: 350px;
+    background-color: #eee;
+    background-image: url("../../images/Me.png");
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    border-radius:5px;
+}
+.border-photo-background{
+    position: absolute;
+    width: 240px;
+    height:340px;
+    background-color:#1b2735;
+    margin:0 !important; 
+    top:5px;
+    left:5px;
+    border-radius:5px;
+}
+.photo{
+    position: absolute;
+    width: 240px;
+    height: 340px;
+    background-image: url("../../images/Me.png");
+    z-index: 3;
+    margin:0 !important;
+    left:5px;
+    top: 5px;
+    border-radius:5px;
+    background-position: center;
+}
+
+.imagen {
+    position: absolute;
+    width: 240px;
+    height: 342px;
+    margin:0;
+    left: -5px;
+    top: -5px;
+    background-color:red;
+    background-image: url("../../images/Me.png");
+    background-size: 250px 350px;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+    transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
+    border-radius:5px;
+  }
+
+  .border-photo:hover > .photo {
+    transform: translate(-15px, -15px);
+    transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
+  }
+
