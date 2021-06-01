@@ -124,14 +124,14 @@ const Main = () => {
               </div>
 
               <div  className="Proyectos-content">
-                <Carrousel
+                <h3>En proceso ...</h3>
+                {/* <Carrousel
                   data={dataProyectos}
-                />
+                /> */}
               </div>
               
             </div>
           </div>
-
           <div id="Contacto">
             <div className="Contacto">
               <div className="title">
