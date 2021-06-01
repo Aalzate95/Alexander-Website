@@ -12,7 +12,7 @@ import javascript_logo from '../../images/javascript-logo.png'
 import postgres_logo from '../../images/postgres-logo.png'
 import mongodb_logo from '../../images/mongodb-logo.png'
 import git_logo from '../../images/git-logo.png'
-import Carrousel from '../../components/carrousel/Carrousel'
+/* import Carrousel from '../../components/carrousel/Carrousel' */
 import Darkhole from '../../components/darkhole/Darkhole'
 
 
@@ -29,13 +29,13 @@ const habilidades =[
     {title:"Git",logo:git_logo,backgroundColor:"#20232A",barColor:"#F05133",nivelHabilidad:"60%"},
   ]
   
-  const dataProyectos = [
+ /*  const dataProyectos = [
     {titulo:"En construcción",descripcion:"",imagen:"https://i.pinimg.com/originals/26/63/9a/26639a3cf8d30c21a9a2ca65695712d9.jpg"},
     {titulo:"En construcción",descripcion:"",imagen:"https://i.pinimg.com/originals/c3/d7/9e/c3d79eb11ded441753abdd790569ca08.jpg"},
     {titulo:"En construcción",descripcion:"",imagen:"https://cdn.wallpapersafari.com/82/0/Q6AgKl.jpg"},
     {titulo:"En construcción",descripcion:"",imagen:"https://images-na.ssl-images-amazon.com/images/I/61S8d42Id7L._AC_.jpg"},
     {titulo:"En construcción",descripcion:"",imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVZ6CA91CIqjsEaG1b1wCihQ6paCjF93hMAnK3Scv_UW7FeuwR3yq_JF9Q32BjLqCmyo&usqp=CAU"},
-  ]
+  ] */
 
 const Main = () => {
 
