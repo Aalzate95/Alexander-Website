@@ -93,11 +93,11 @@ const Main = () => {
               </div>
               <p>Si quieres conocer mi historia o conseguir mi CV, los tienes aquí abajo.</p>
               <div className="SobreMi-content">
-                    <div onClick={(e)=>{history.push("/about-me")}}>
+                    <a href="/about-me">
                       <Darkhole
                           title="Historia"
                         />
-                    </div>
+                    </a>
                     <Darkhole
                       title="CV"
                     />
