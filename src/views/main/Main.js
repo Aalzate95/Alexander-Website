@@ -95,7 +95,7 @@ const Main = () => {
               <div className="SobreMi-content">
                     <div onClick={(e)=>{history.push("/about-me")}}>
                       <Darkhole
-                          title="H"
+                          title="Historia"
                         />
                     </div>
                     <Darkhole

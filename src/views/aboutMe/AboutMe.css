@@ -3,7 +3,7 @@
     align-items: center;
     text-align: center;
     width:100%;
-
+    padding: 15% 0 15% 0;
 }
 
 .etiquetaReturn{
@@ -27,11 +27,17 @@
     margin: 10px 5px 10px 5px;
 }
 
+.neon h1{
+    font-family: Monoton;
+    font-weight: normal;
+    text-shadow: 0 0 5px #e29e4f, 0 0 5px #e29e4f;
+}
 
-.title span{
+.neon span{
     display:block;
     border-top: 3px solid #df861d;
     margin:0 30% 0 30%;
+    box-shadow:  0px 0px 20px 3px #df861d, inset 0 0 10px #df861d;
 }
 
 .AboutMe-content  div{
@@ -42,7 +48,11 @@
 .AboutMe-history{
     display:grid;
     grid-template-columns:2fr 1fr;
-    text-align:justify
+    text-align:justify;
+}
+
+.AboutMe-history-parragraph{
+    text-shadow: 0 0 3px #bebebe, 0 0 3px #0298fc;
 }
 
 .AboutMe-photo{
@@ -55,25 +65,17 @@
 }
 
 .border-photo{
-    width: 250px;
-    height: 350px;
-    background-color: #eee;
-    background-image: url("../../images/Me.png");
+    width: 260px;
+    height: 360px;
     position: relative;
     z-index: 1;
-    background-position: center;
     border-radius:5px;
+    background-color: transparent;
+    border: 3px solid rgb(255, 89, 191);
+    box-shadow:  0px 0px 20px 3px rgb(212, 0, 131), inset 0 0 15px 3px rgb(226, 31, 151);
+
 }
-.border-photo-background{
-    position: absolute;
-    width: 240px;
-    height:340px;
-    background-color:#1b2735;
-    margin:0 !important; 
-    top:5px;
-    left:5px;
-    border-radius:5px;
-}
+
 .photo{
     position: absolute;
     width: 240px;
@@ -81,31 +83,75 @@
     background-image: url("../../images/Me.png");
     z-index: 3;
     margin:0 !important;
-    left:5px;
-    top: 5px;
+    left:10px;
+    top: 10px;
     border-radius:5px;
     background-position: center;
+    box-shadow:  inset 0 0 5px 1px rgb(226, 31, 151);
 }
 
-.imagen {
-    position: absolute;
-    width: 240px;
-    height: 342px;
-    margin:0;
-    left: -5px;
-    top: -5px;
-    background-color:red;
-    background-image: url("../../images/Me.png");
-    background-size: 250px 350px;
-    background-size: cover;
-    background-position: center;
-    z-index: 3;
-    transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
-    border-radius:5px;
-  }
 
-  .border-photo:hover > .photo {
-    transform: translate(-15px, -15px);
-    transition: 0.5s cubic-bezier(0.5, 0.03, 0.41, 1);
-  }
+.AboutMe-return{
+    display:flex;
+    justify-content: center;
+}
+.AboutMe-return div{
+    background-color:transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    color:gray;
+    border:3px solid;
+    width:auto;
+    height:auto;
+    
+}
+.AboutMe-return p{
+    margin: 15px;
+    
+}
 
+.AboutMe-return div:hover{
+    cursor: pointer;
+    color:#df861d;
+    box-shadow:  0px 0px 20px 3px #df861d, inset 0 0 10px #df861d;
+    text-shadow: 0 0 5px #e29e4f, 0 0 5px #e29e4f;
+}
+
+
+  @media only screen and (max-width: 600px) {
+    .AboutMe{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .AboutMe-history{
+        display:grid;
+        grid-template-columns:1fr;
+        text-align:justify;
+        
+    }
+
+    .AboutMe-history p{ 
+        font-size:14px;
+    }
+    .AboutMe-photo{
+        grid-row: 1;
+        margin: 0!important;
+    }
+
+    .neon span{
+        margin:0 10% 0 10%;
+    }
+
+    .border-photo{
+        width: 220px;
+        height: 320px;
+    }
+    
+    .photo{
+        background-size:cover;
+        width: 200px;
+        height: 300px;
+    }
+
+  }
