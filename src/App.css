@@ -82,6 +82,11 @@ html{
   width: 100%;
 }
 
+.SobreMi-content a{
+  font-weight: normal;
+  color:#bcb6ae;
+}
+
 .Proyectos-content{
   display: flex;
   flex-direction: column;

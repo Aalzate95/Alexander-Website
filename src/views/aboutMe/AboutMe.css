@@ -1,31 +1,10 @@
 .AboutMe{
     color:white;
-    align-items: center;
     text-align: center;
     width:100%;
-    padding: 15% 0 15% 0;
+    padding: 5% 0 10% 0;
 }
 
-.etiquetaReturn{
-    position:fixed;
-    top:20px;
-    left:-40px;
-    background-color:#df861d;
-    border-top-right-radius: 5px ;
-    border-bottom-right-radius: 5px ;
-    color:#df861d;
-    font-weight:bold;
-}
-
-.etiquetaReturn:hover{
-    cursor:pointer;
-    left:0px;
-    color:black;
-}
-
-.etiquetaReturn p{
-    margin: 10px 5px 10px 5px;
-}
 
 .neon h1{
     font-family: Monoton;
