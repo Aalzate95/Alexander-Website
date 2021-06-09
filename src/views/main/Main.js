@@ -98,9 +98,11 @@ const Main = () => {
                           title="Historia"
                         />
                     </a>
-                    <Darkhole
-                      title="CV"
-                    />
+                    <a href="https://my-web-site-resources.s3.amazonaws.com/CV_Alexander-Alzate_2021.pdf">
+                      <Darkhole
+                        title="CV"
+                      />  
+                    </a>
               </div>
             </div>
           </div>
