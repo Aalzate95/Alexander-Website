@@ -49,4 +49,5 @@ yarn start
 ## Licence
 
 Copyright © 2021 [Alex Alzate](https://github.com/Aalzate95).
+
 This project is [MIT](https://github.com/Aalzate95/Alexander-Website/blob/main/LICENSE) licensed
