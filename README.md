@@ -36,6 +36,11 @@ git clone https://github.com/Aalzate95/Alexander-Website.git
 yarn install or npm install
 ```
 
+## Run Project
+
+```
+yarn start
+```
 ## Contact
 
 - LinkedIn [Aalzate95](https://www.linkedin.com/in/aalzate95/)
